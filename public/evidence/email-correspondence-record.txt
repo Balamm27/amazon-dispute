@@ -9,7 +9,7 @@ email chains and marketing content are omitted. Dates reflect the message
 headers. The original Gmail messages remain the source records.
 
 ==========================================================================
-JULY 10, 2026 — AMAZON ORDER CONFIRMATION
+JULY 10, 2026 - AMAZON ORDER CONFIRMATION
 From: Amazon.com <auto-confirm@amazon.com>
 Subject: Ordered: "PlayBetter Garmin Venu 4..." and 1 more item
 ==========================================================================
@@ -17,7 +17,7 @@ Subject: Ordered: "PlayBetter Garmin Venu 4..." and 1 more item
 Thanks for your order.
 
 Arriving tomorrow
-Bala — LYNNWOOD, WA
+Bala - LYNNWOOD, WA
 Order #112-9902087-6927424
 
 PlayBetter Garmin Venu 4 (Slate/Black, 45mm) Fitness GPS Smartwatch Bundle
@@ -29,7 +29,7 @@ The same confirmation included a separate order for Clairol hair dye,
 Order #112-1585850-9689054, totaling $8.78 and addressed to Bellevue, WA.
 
 ==========================================================================
-JULY 10, 2026 — AMAZON SHIPMENT CONFIRMATION
+JULY 10, 2026 - AMAZON SHIPMENT CONFIRMATION
 From: Amazon.com <shipment-tracking@amazon.com>
 Subject: Shipped: "PlayBetter Garmin Venu 4..."
 ==========================================================================
@@ -37,7 +37,7 @@ Subject: Shipped: "PlayBetter Garmin Venu 4..."
 Your package was shipped.
 
 Arriving tomorrow
-Bala — LYNNWOOD, WA
+Bala - LYNNWOOD, WA
 Order #112-9902087-6927424
 
 PlayBetter Garmin Venu 4 (Slate/Black, 45mm) Fitness GPS Smartwatch Bundle
@@ -45,7 +45,7 @@ Quantity: 1
 Merchandise and tax total before the $40 rewards offset: $618.79
 
 ==========================================================================
-JULY 10, 2026 — CUSTOMER EXECUTIVE ESCALATION
+JULY 10, 2026 - CUSTOMER EXECUTIVE ESCALATION
 From: Balasubramanian M M <bala.manoghar@gmail.com>
 To: Amazon leadership addresses
 Subject: Urgent Executive Escalation: Account Breach Despite 2FA
@@ -85,7 +85,7 @@ Regards,
 Bala
 
 ==========================================================================
-JULY 11, 2026 — CUSTOMER FOLLOW-UP TO AMAZON LEADERSHIP
+JULY 11, 2026 - CUSTOMER FOLLOW-UP TO AMAZON LEADERSHIP
 From: Balasubramanian M M <bala.manoghar@gmail.com>
 Subject: Re: Urgent Executive Escalation: Account Breach Despite 2FA
 ==========================================================================
@@ -119,7 +119,7 @@ Regards,
 Bala
 
 ==========================================================================
-JULY 11, 2026 — AMAZON ACCOUNT RECOVERY NOTICE
+JULY 11, 2026 - AMAZON ACCOUNT RECOVERY NOTICE
 From: Amazon Account Protection Services <no-reply@amazon.com>
 Subject: Account Recovery: Sign-in and verify your order.
 ==========================================================================
@@ -140,7 +140,7 @@ Amazon instructed the customer to report unauthorized card charges to the
 bank and stated that refund decisions are made at the bank's discretion.
 
 ==========================================================================
-JULY 11, 2026 — AMAZON ACCOUNT PROTECTION FOLLOW-UP
+JULY 11, 2026 - AMAZON ACCOUNT PROTECTION FOLLOW-UP
 From: Amazon Account Protection Services <no-reply@amazon.com>
 Subject: Your Amazon account needs attention
 ==========================================================================
@@ -157,7 +157,7 @@ unauthorized charges and stated that refund decisions are made at the bank's
 discretion.
 
 ==========================================================================
-JULY 12, 2026 — AMAZON BANK-DISPUTE INSTRUCTION
+JULY 12, 2026 - AMAZON BANK-DISPUTE INSTRUCTION
 From: Amazon Account Protection Services <no-reply@amazon.com>
 Subject: Recent changes to your Amazon.com account
 ==========================================================================
@@ -167,7 +167,7 @@ charges to the bank within 90 days. Amazon stated that the bank or financial
 institution is responsible for refunding unauthorized card charges.
 
 ==========================================================================
-JULY 13, 2026 — AMAZON EXECUTIVE CUSTOMER RELATIONS RESPONSE
+JULY 13, 2026 - AMAZON EXECUTIVE CUSTOMER RELATIONS RESPONSE
 From: Christian, Amazon Executive Customer Relations <cs-reply@amazon.com>
 Subject: A Message from Christian with Amazon.com's Executive Customer Relations
 ==========================================================================
@@ -195,7 +195,7 @@ Christian
 Amazon.com
 
 ==========================================================================
-JULY 14, 2026 — CUSTOMER RESPONSE TO AMAZON
+JULY 14, 2026 - CUSTOMER RESPONSE TO AMAZON
 From: Balasubramanian M M <bala.manoghar@gmail.com>
 Subject: Re: A Message from Christian with Amazon.com's Executive Customer Relations
 ==========================================================================
@@ -224,7 +224,7 @@ Regards,
 Bala
 
 ==========================================================================
-JULY 14, 2026 — AMERICAN EXPRESS DISPUTE CLOSED
+JULY 14, 2026 - AMERICAN EXPRESS DISPUTE CLOSED
 From: American Express <AmericanExpress@welcome.americanexpress.com>
 Subject: We've closed your dispute
 Reference: D-99641426
@@ -243,7 +243,7 @@ amex-merchant-document-578-79.pdf. A screenshot of the closure notice is also
 preserved as amex-closure-screenshot.png.
 
 ==========================================================================
-JULY 14, 2026 — CUSTOMER FOLLOW-UP AFTER AMEX REBILLING
+JULY 14, 2026 - CUSTOMER FOLLOW-UP AFTER AMEX REBILLING
 From: Balasubramanian M M <bala.manoghar@gmail.com>
 To: Christian and Amazon leadership addresses
 Subject: Re: A Message from Christian with Amazon.com's Executive Customer Relations
@@ -285,7 +285,7 @@ No later substantive response from Amazon was located in the connected
 mailbox as of August 15, 2026.
 
 ==========================================================================
-AUGUST 12–14, 2026 — CURRENT ATTORNEY HANDOFF
+AUGUST 12-14, 2026 - CURRENT ATTORNEY HANDOFF
 ==========================================================================
 
 LegalEASE matched Case #408324 with Lindsey Parlin of Parlin Law P.C. for a

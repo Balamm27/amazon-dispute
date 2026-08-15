@@ -1,3 +1,13 @@
+import {
+  BadgeDollarSign,
+  CalendarClock,
+  FileText,
+  FolderOpen,
+  Mail,
+  Scale,
+  ShieldAlert,
+} from "lucide-react";
+
 type TimelineEntry = {
   date: string;
   heading: string;
@@ -19,7 +29,7 @@ const timeline: TimelineEntry[] = [
     source: "Order confirmation, shipment emails, and preserved order screenshot",
   },
   {
-    date: "July 10–11, 2026",
+    date: "July 10-11, 2026",
     heading: "Repeated customer-service and leadership escalation",
     detail: "I made multiple efforts to have Amazon stop the transaction and secure the account. I reported a disconnected call, a promised callback that did not occur, and instructions to contact the delivery carrier myself. I also emailed Amazon leadership and followed up when no accountable case owner intervened.",
     source: "Executive escalation correspondence",
@@ -43,7 +53,7 @@ const timeline: TimelineEntry[] = [
     source: "Account Protection notices; preserved screenshot; customer account experience",
   },
   {
-    date: "July 12–13, 2026",
+    date: "July 12-13, 2026",
     heading: "Amazon directed the refund request to the card issuer",
     detail: "Amazon advised that the financial institution was responsible for refunding unauthorized charges. On July 13, Amazon Executive Customer Relations confirmed that the Garmin order could be flagged as fraudulent and that this step was complete, but Amazon did not issue a refund and again directed me to the bank.",
     source: "Account Protection email; Executive Customer Relations email",
@@ -55,13 +65,13 @@ const timeline: TimelineEntry[] = [
     source: "American Express closure notice and merchant document",
   },
   {
-    date: "July 14–August 15, 2026",
+    date: "July 14-August 15, 2026",
     heading: "Amazon did not substantively answer the follow-up",
     detail: "I asked Amazon whether it had contested the card dispute, whether it informed American Express that the order was flagged as fraudulent, whether it would correct conflicting information, and how the amount would be refunded. I also requested preservation of relevant account, authentication, order, support, delivery, and chargeback records. No substantive response addressing those questions was located in the reviewed mailbox through August 15.",
     source: "July 14 follow-up; mailbox review through August 15, 2026",
   },
   {
-    date: "August 12–14, 2026",
+    date: "August 12-14, 2026",
     heading: "Matter referred to counsel",
     detail: "LegalEASE matched Case 408324 with Lindsey Parlin. Ms. Parlin requested documentation of the charges and the responses received from Amazon and American Express.",
     source: "LegalEASE referral and Parlin Law correspondence",
@@ -146,32 +156,43 @@ export default function Home() {
       <header className="site-header">
         <a className="case-name" href="#top">Case 408324</a>
         <nav aria-label="Case brief navigation">
-          <a href="#summary">Executive summary</a>
-          <a href="#timeline">Timeline</a>
-          <a href="#issues">Issues</a>
-          <a href="#evidence">Evidence</a>
+          <a href="#summary"><FileText aria-hidden="true" /> <span>Executive summary</span></a>
+          <a href="#timeline"><CalendarClock aria-hidden="true" /> <span>Timeline</span></a>
+          <a href="#issues"><Scale aria-hidden="true" /> <span>Issues</span></a>
+          <a href="#evidence"><FolderOpen aria-hidden="true" /> <span>Evidence</span></a>
         </nav>
         <span>Confidential attorney review</span>
       </header>
 
       <div className="document-heading">
-        <p>Prepared for Lindsey Parlin · August 15, 2026</p>
-        <h1>Amazon Account Compromise and Unauthorized Transaction</h1>
-        <p className="subtitle">Factual case brief and supporting record</p>
+        <div className="heading-copy">
+          <p>Prepared for Lindsey Parlin · August 15, 2026</p>
+          <h1>Amazon Account Compromise and Unauthorized Transaction</h1>
+          <p className="subtitle">Factual case brief and supporting record</p>
+        </div>
+        <aside className="case-status" aria-label="Current case status">
+          <p>Current status</p>
+          <strong>Unresolved</strong>
+          <dl>
+            <div><dt>Loss</dt><dd>$578.79</dd></div>
+            <div><dt>Fraud flag</dt><dd>Confirmed</dd></div>
+            <div><dt>Refund</dt><dd>Not issued</dd></div>
+          </dl>
+        </aside>
       </div>
 
       <section className="case-section executive-summary" id="summary">
-        <div className="section-label"><span>01</span><h2>Executive Summary</h2></div>
+        <div className="section-label"><div className="section-icon"><FileText aria-hidden="true" /></div><span>01</span><h2>Executive Summary</h2></div>
         <div className="section-content">
           <p className="lead">This matter concerns unauthorized access to my Amazon account, an unauthorized order totaling $578.79, Amazon's acknowledgment of account compromise and fraud, and the absence of a refund after both Amazon and American Express declined to resolve the loss.</p>
-          <p>On July 10, 2026, I discovered four unauthorized orders in my Amazon account despite having two-step verification enabled. Amazon did not proactively discover the fraud and alert me. Its account-protection response followed my repeated calls and requests for escalation after I informed Amazon of the unauthorized activity. Three orders were canceled, but order 112-9902087-6927424—a Garmin smartwatch bundle—was shipped to an address I did not authorize and recorded as delivered the following day.</p>
+          <p>On July 10, 2026, I discovered four unauthorized orders in my Amazon account despite having two-step verification enabled. Amazon did not proactively discover the fraud and alert me. Its account-protection response followed my repeated calls and requests for escalation after I informed Amazon of the unauthorized activity. Three orders were canceled, but order 112-9902087-6927424, a Garmin smartwatch bundle, was shipped to an address I did not authorize and recorded as delivered the following day.</p>
           <p>During those initial contacts, Amazon customer service did not appear to have a coherent process for handling the incident. I reported disconnected calls, promised callbacks that did not occur, and representatives directing me to contact FedEx and my bank myself. I was the victim reporting fraud through Amazon's platform, yet Amazon placed the investigation, shipment intervention, financial recovery, and continuing monitoring work back on me.</p>
           <p>Amazon's Account Protection team subsequently stated that an unauthorized party may have accessed my account. Amazon removed suspicious devices and account changes, and Executive Customer Relations confirmed that the Garmin order was flagged as fraudulent. Nevertheless, Amazon refused to issue the $578.79 refund and directed me to American Express. American Express then closed dispute D-99641426, leaving the charge unresolved.</p>
           <p>Amazon also stated that suspicious orders were removed from the “Your Orders” section. I did not request or consent to that removal. The Garmin order and related unauthorized activity later became unavailable through my ordinary order history, limiting my access to evidence concerning the incident. I preserved the available order emails, security notices, screenshot, and American Express documents presented below.</p>
           <p>The scope of the security exposure remains unknown. Amazon has not told me which saved delivery addresses, credit or debit cards, rewards balances, or other account information were viewed, copied, altered, or used by the unauthorized party. Instead, Amazon instructed me to review all recent activity on my credit and debit cards, monitor for unauthorized changes, and report any new charges to each bank. This transfers the continuing monitoring and remediation burden to me without answering what information was exposed or accepting responsibility for the compromise.</p>
 
           <div className="fact-table" role="table" aria-label="Key case facts">
-            <div role="row"><span role="rowheader">Amount at issue</span><strong role="cell">$578.79</strong></div>
+            <div role="row"><BadgeDollarSign aria-hidden="true" /><span role="rowheader">Amount at issue</span><strong role="cell">$578.79</strong></div>
             <div role="row"><span role="rowheader">Amazon order</span><strong role="cell">112-9902087-6927424</strong></div>
             <div role="row"><span role="rowheader">Amex dispute</span><strong role="cell">D-99641426</strong></div>
             <div role="row"><span role="rowheader">Incident date</span><strong role="cell">July 10, 2026</strong></div>
@@ -187,13 +208,13 @@ export default function Home() {
       </section>
 
       <section className="case-section timeline-section" id="timeline">
-        <div className="section-label"><span>02</span><h2>Chronology</h2></div>
+        <div className="section-label"><div className="section-icon"><CalendarClock aria-hidden="true" /></div><span>02</span><h2>Chronology</h2></div>
         <div className="section-content">
           <p className="section-intro">The following chronology is based on the preserved emails, screenshots, and account records currently available.</p>
           <div className="timeline-list">
             {timeline.map((entry, index) => (
               <article className="timeline-entry" key={`${entry.date}-${entry.heading}`}>
-                <div className="timeline-index">{String(index + 1).padStart(2, "0")}</div>
+                <div className="timeline-index"><CalendarClock aria-hidden="true" /><span>{String(index + 1).padStart(2, "0")}</span></div>
                 <div className="timeline-date">{entry.date}</div>
                 <div className="timeline-copy">
                   <h3>{entry.heading}</h3>
@@ -207,24 +228,24 @@ export default function Home() {
       </section>
 
       <section className="case-section issues-section" id="issues">
-        <div className="section-label"><span>03</span><h2>Issues for Counsel</h2></div>
+        <div className="section-label"><div className="section-icon"><Scale aria-hidden="true" /></div><span>03</span><h2>Issues for Counsel</h2></div>
         <div className="section-content">
           <ol className="issue-list">
-            <li><span>01</span><div><h3>Responsibility for the unauthorized loss</h3><p>Amazon acknowledged possible unauthorized access and completed its fraudulent-order flag, but no refund followed. The interaction between Amazon's findings and American Express's dispute closure remains unexplained.</p></div></li>
-            <li><span>02</span><div><h3>Customer-service failure after prompt notice</h3><p>Amazon did not proactively identify and resolve this incident. Its security response followed my repeated calls and requests for escalation. I reported that frontline representatives appeared uncertain how to handle the account takeover, redirected me to FedEx and the bank, disconnected calls, and failed to provide promised callbacks. The record should be evaluated to determine whether Amazon had and followed a reasonable process after receiving notice while the activity and shipment were still unfolding.</p></div></li>
-            <li><span>03</span><div><h3>Unknown scope of exposed addresses and payment information</h3><p>Amazon has not identified which saved delivery addresses, credit or debit cards, rewards balances, or other account information were accessible to the unauthorized party. Amazon instead instructed me to review all recent card activity, monitor for changes, and report future unauthorized charges to the banks. Counsel should consider the continuing monitoring burden, the lack of a defined exposure notice, and the records needed to establish what information was accessed or altered.</p></div></li>
-            <li><span>04</span><div><h3>Removal and preservation of order records</h3><p>Amazon removed suspicious orders from the normal account view without recorded consent. Preservation may be necessary for authentication, device, order, support, delivery, internal fraud, and chargeback records.</p></div></li>
-            <li><span>05</span><div><h3>Information supplied during the Amex dispute</h3><p>Amazon has not answered whether it contested the dispute or communicated its own fraud determination to American Express. The merchant-side submission and any associated records should be obtained and reviewed.</p></div></li>
+            <li><div className="issue-marker"><ShieldAlert aria-hidden="true" /><span>01</span></div><div><h3>Responsibility for the unauthorized loss</h3><p>Amazon acknowledged possible unauthorized access and completed its fraudulent-order flag, but no refund followed. The interaction between Amazon's findings and American Express's dispute closure remains unexplained.</p></div></li>
+            <li><div className="issue-marker"><ShieldAlert aria-hidden="true" /><span>02</span></div><div><h3>Customer-service failure after prompt notice</h3><p>Amazon did not proactively identify and resolve this incident. Its security response followed my repeated calls and requests for escalation. I reported that frontline representatives appeared uncertain how to handle the account takeover, redirected me to FedEx and the bank, disconnected calls, and failed to provide promised callbacks. The record should be evaluated to determine whether Amazon had and followed a reasonable process after receiving notice while the activity and shipment were still unfolding.</p></div></li>
+            <li><div className="issue-marker"><ShieldAlert aria-hidden="true" /><span>03</span></div><div><h3>Unknown scope of exposed addresses and payment information</h3><p>Amazon has not identified which saved delivery addresses, credit or debit cards, rewards balances, or other account information were accessible to the unauthorized party. Amazon instead instructed me to review all recent card activity, monitor for changes, and report future unauthorized charges to the banks. Counsel should consider the continuing monitoring burden, the lack of a defined exposure notice, and the records needed to establish what information was accessed or altered.</p></div></li>
+            <li><div className="issue-marker"><ShieldAlert aria-hidden="true" /><span>04</span></div><div><h3>Removal and preservation of order records</h3><p>Amazon removed suspicious orders from the normal account view without recorded consent. Preservation may be necessary for authentication, device, order, support, delivery, internal fraud, and chargeback records.</p></div></li>
+            <li><div className="issue-marker"><ShieldAlert aria-hidden="true" /><span>05</span></div><div><h3>Information supplied during the Amex dispute</h3><p>Amazon has not answered whether it contested the dispute or communicated its own fraud determination to American Express. The merchant-side submission and any associated records should be obtained and reviewed.</p></div></li>
           </ol>
         </div>
       </section>
 
       <section className="case-section evidence-section" id="evidence">
-        <div className="section-label"><span>04</span><h2>Evidence</h2></div>
+        <div className="section-label"><div className="section-icon"><FolderOpen aria-hidden="true" /></div><span>04</span><h2>Evidence</h2></div>
         <div className="section-content">
           <p className="section-intro">The files below are the currently preserved supporting record. Each exhibit opens directly in a separate tab.</p>
           <div className="snapshot-heading">
-            <h3>Amazon email snapshots</h3>
+            <h3><Mail aria-hidden="true" /> Amazon email snapshots</h3>
             <p>The earlier viewport captures have been replaced. These are complete, panoramic evidence renderings built from the source Gmail headers and verbatim message bodies. The executive-relations image contains Amazon's message and both of my replies in one chronological thread. The original Gmail messages and the complete searchable correspondence remain preserved separately.</p>
           </div>
           <div className="email-snapshot-grid">
@@ -246,7 +267,7 @@ export default function Home() {
           <div className="exhibit-list">
             {exhibits.map((exhibit) => (
               <article className="exhibit" key={exhibit.number}>
-                <div className="exhibit-number">Exhibit {exhibit.number}</div>
+                <div className="exhibit-number"><FolderOpen aria-hidden="true" /> <span>Exhibit {exhibit.number}</span></div>
                 <div className="exhibit-copy">
                   <div className="exhibit-title">
                     <h3>{exhibit.title}</h3>
