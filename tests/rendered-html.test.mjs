@@ -22,6 +22,8 @@ test("renders the professional attorney case brief", async () => {
   assert.match(html, /Executive Summary/);
   assert.match(html, /Chronology/);
   assert.match(html, /Issues for Counsel/);
+  assert.match(html, /Unknown scope of exposed addresses and payment information/);
+  assert.match(html, /Amazon email snapshots/);
   assert.match(html, /\$578\.79/);
   assert.match(html, /Case 408324/);
   assert.match(html, /removed from the/);
@@ -36,6 +38,10 @@ test("ships the core evidence files", async () => {
     access(new URL("../public/evidence/amex-closure-screenshot.png", import.meta.url)),
     access(new URL("../public/evidence/amex-merchant-document-578-79.pdf", import.meta.url)),
     access(new URL("../public/evidence/email-correspondence-record.txt", import.meta.url)),
+    access(new URL("../public/evidence/email-snapshots/amazon-account-recovery-jul-11.png", import.meta.url)),
+    access(new URL("../public/evidence/email-snapshots/amazon-account-needs-attention-jul-11.png", import.meta.url)),
+    access(new URL("../public/evidence/email-snapshots/amazon-recent-changes-jul-12.png", import.meta.url)),
+    access(new URL("../public/evidence/email-snapshots/amazon-executive-relations-jul-13.png", import.meta.url)),
   ]);
   await assert.rejects(access(new URL("../app/_sites-preview/", import.meta.url)));
 });

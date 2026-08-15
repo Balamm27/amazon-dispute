@@ -21,9 +21,15 @@ E-04  Material email correspondence record
       Chronological, non-duplicative transcript of the material Amazon,
       American Express, escalation, and attorney-handoff messages.
 
-E-05  Dashboard itself
-      A structured case overview with timeline, disputed facts, unresolved
-      questions, and direct links to E-01 through E-04.
+E-05  Amazon email snapshots
+      Folder: email-snapshots/
+      Four Gmail-source images preserving the visible sender, subject, and
+      presentation of Amazon's July 11–13 security and executive-response
+      emails. The full message text remains in E-04.
+
+E-06  Case brief itself
+      A structured executive summary, chronology, issues for counsel, and
+      direct links to the supporting record.
 
 IMPORTANT SOURCE NOTE
 Amazon's July 11 Account Protection emails expressly state that it detected
@@ -34,3 +40,9 @@ disputed delivered Garmin order and related unauthorized orders later became
 invisible through the normal order-history page. E-01 and the order/shipment
 emails preserve the disputed Garmin order details.
 
+SECURITY-SCOPE NOTE
+Amazon instructed the customer to review all recent credit- and debit-card
+activity, monitor for unauthorized changes, and report unauthorized charges to
+the banks. The reviewed correspondence does not identify which saved payment
+instruments, delivery addresses, rewards balances, or other account information
+were accessible to the unauthorized party.

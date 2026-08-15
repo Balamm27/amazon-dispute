@@ -109,6 +109,37 @@ const exhibits = [
   },
 ];
 
+const emailSnapshots = [
+  {
+    date: "July 11, 2026 · 9:21 AM PT",
+    sender: "Amazon Account Protection Services",
+    subject: "Account Recovery: Sign-in and verify your order.",
+    significance: "Amazon states that an unauthorized party may have accessed the account, that suspicious devices and account changes were removed, that Two-Step Verification may have been affected, and that unauthorized card charges must be reported to the bank.",
+    href: "/evidence/email-snapshots/amazon-account-recovery-jul-11.png",
+  },
+  {
+    date: "July 11, 2026 · 1:29 PM PT",
+    sender: "Amazon Account Protection Services",
+    subject: "Your Amazon account needs attention",
+    significance: "Amazon confirms that it detected unauthorized activity, removed suspicious devices and orders, directs the customer to verify security settings, and again places refund decisions with the bank.",
+    href: "/evidence/email-snapshots/amazon-account-needs-attention-jul-11.png",
+  },
+  {
+    date: "July 11, 2026 · 10:49 PM PT",
+    sender: "Amazon Account Protection Services",
+    subject: "Recent changes to your Amazon.com account",
+    significance: "Amazon instructs the customer to review all recent credit- and debit-card activity, report unauthorized charges within 90 days, complete bank dispute forms, and rely on the financial institution for reimbursement.",
+    href: "/evidence/email-snapshots/amazon-recent-changes-jul-12.png",
+  },
+  {
+    date: "July 13, 2026 · 6:46 AM PT",
+    sender: "Amazon Executive Customer Relations",
+    subject: "A Message from Christian with Amazon.com's Executive Customer Relations",
+    significance: "Amazon confirms that the fraudulent-order flag is complete but states that the refund process must occur through the bank and that Amazon will not issue a refund unless a bank dispute is submitted.",
+    href: "/evidence/email-snapshots/amazon-executive-relations-jul-13.png",
+  },
+];
+
 export default function Home() {
   return (
     <main id="top">
@@ -136,6 +167,7 @@ export default function Home() {
           <p>On July 10, 2026, I discovered four unauthorized orders in my Amazon account despite having two-step verification enabled. I notified Amazon immediately. Three orders were canceled, but order 112-9902087-6927424—a Garmin smartwatch bundle—was shipped to an address I did not authorize and recorded as delivered the following day.</p>
           <p>Amazon's Account Protection team subsequently stated that an unauthorized party may have accessed my account. Amazon removed suspicious devices and account changes, and Executive Customer Relations confirmed that the Garmin order was flagged as fraudulent. Nevertheless, Amazon refused to issue the $578.79 refund and directed me to American Express. American Express then closed dispute D-99641426, leaving the charge unresolved.</p>
           <p>Amazon also stated that suspicious orders were removed from the “Your Orders” section. I did not request or consent to that removal. The Garmin order and related unauthorized activity later became unavailable through my ordinary order history, limiting my access to evidence concerning the incident. I preserved the available order emails, security notices, screenshot, and American Express documents presented below.</p>
+          <p>The scope of the security exposure remains unknown. Amazon has not told me which saved delivery addresses, credit or debit cards, rewards balances, or other account information were viewed, copied, altered, or used by the unauthorized party. Instead, Amazon instructed me to review all recent activity on my credit and debit cards, monitor for unauthorized changes, and report any new charges to each bank. This transfers the continuing monitoring and remediation burden to me without answering what information was exposed or accepting responsibility for the compromise.</p>
 
           <div className="fact-table" role="table" aria-label="Key case facts">
             <div role="row"><span role="rowheader">Amount at issue</span><strong role="cell">$578.79</strong></div>
@@ -143,11 +175,12 @@ export default function Home() {
             <div role="row"><span role="rowheader">Amex dispute</span><strong role="cell">D-99641426</strong></div>
             <div role="row"><span role="rowheader">Incident date</span><strong role="cell">July 10, 2026</strong></div>
             <div role="row"><span role="rowheader">Current status</span><strong role="cell">Unresolved; refund not issued</strong></div>
+            <div role="row"><span role="rowheader">Exposure scope</span><strong role="cell">Not disclosed by Amazon</strong></div>
           </div>
 
           <div className="position-note">
             <h3>Position</h3>
-            <p>Amazon controlled the account, order, shipment, security response, and merchant-side chargeback information. It received prompt notice of the unauthorized activity and later flagged the order as fraudulent, yet it shifted recovery to the carrier and card issuer and did not provide a substantive resolution. I am seeking counsel's advice regarding recovery of the loss, Amazon's handling of the compromised account, removal of order records, and preservation of relevant evidence.</p>
+            <p>Amazon controlled the account, order, shipment, security response, and merchant-side chargeback information. It received prompt notice of the unauthorized activity and later flagged the order as fraudulent, yet it shifted recovery to the carrier and card issuer and did not provide a substantive resolution. It also left me responsible for monitoring an unknown number of potentially exposed payment instruments and account records without disclosing the scope of the exposure. I am seeking counsel's advice regarding recovery of the loss, Amazon's handling of the compromised account, removal of order records, the continuing monitoring burden, and preservation of relevant evidence.</p>
           </div>
         </div>
       </section>
@@ -178,7 +211,7 @@ export default function Home() {
           <ol className="issue-list">
             <li><span>01</span><div><h3>Responsibility for the unauthorized loss</h3><p>Amazon acknowledged possible unauthorized access and completed its fraudulent-order flag, but no refund followed. The interaction between Amazon's findings and American Express's dispute closure remains unexplained.</p></div></li>
             <li><span>02</span><div><h3>Response after prompt notice</h3><p>Amazon received notice while the activity was unfolding. The record should be evaluated to determine whether Amazon took reasonable and timely action to prevent shipment and delivery.</p></div></li>
-            <li><span>03</span><div><h3>Account security and two-step verification</h3><p>Amazon has not explained how the account was accessed, whether two-step verification was bypassed or altered, the scope of the compromise, or whether the account is conclusively secure.</p></div></li>
+            <li><span>03</span><div><h3>Unknown scope of exposed addresses and payment information</h3><p>Amazon has not identified which saved delivery addresses, credit or debit cards, rewards balances, or other account information were accessible to the unauthorized party. Amazon instead instructed me to review all recent card activity, monitor for changes, and report future unauthorized charges to the banks. Counsel should consider the continuing monitoring burden, the lack of a defined exposure notice, and the records needed to establish what information was accessed or altered.</p></div></li>
             <li><span>04</span><div><h3>Removal and preservation of order records</h3><p>Amazon removed suspicious orders from the normal account view without recorded consent. Preservation may be necessary for authentication, device, order, support, delivery, internal fraud, and chargeback records.</p></div></li>
             <li><span>05</span><div><h3>Information supplied during the Amex dispute</h3><p>Amazon has not answered whether it contested the dispute or communicated its own fraud determination to American Express. The merchant-side submission and any associated records should be obtained and reviewed.</p></div></li>
           </ol>
@@ -189,6 +222,26 @@ export default function Home() {
         <div className="section-label"><span>04</span><h2>Evidence</h2></div>
         <div className="section-content">
           <p className="section-intro">The files below are the currently preserved supporting record. Each exhibit opens directly in a separate tab.</p>
+          <div className="snapshot-heading">
+            <h3>Amazon email snapshots</h3>
+            <p>These images were captured from the source messages in Gmail on August 15, 2026. They preserve the visible sender, subject, and message presentation. The complete material email correspondence remains available separately below and contains the full searchable text.</p>
+          </div>
+          <div className="email-snapshot-grid">
+            {emailSnapshots.map((email) => (
+              <article className="email-snapshot" key={email.subject}>
+                <a href={email.href} target="_blank" rel="noreferrer" aria-label={`Open snapshot of ${email.subject}`}>
+                  <img src={email.href} alt={`Gmail snapshot: ${email.subject}`} />
+                </a>
+                <div>
+                  <p className="snapshot-date">{email.date}</p>
+                  <h3>{email.subject}</h3>
+                  <p className="snapshot-sender">From: {email.sender}</p>
+                  <p>{email.significance}</p>
+                  <a href={email.href} target="_blank" rel="noreferrer">Open full-size snapshot <span aria-hidden="true">↗</span></a>
+                </div>
+              </article>
+            ))}
+          </div>
           <div className="exhibit-list">
             {exhibits.map((exhibit) => (
               <article className="exhibit" key={exhibit.number}>

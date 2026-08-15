@@ -80,6 +80,19 @@ img { display: block; max-width: 100%; }
 .issue-list p { color: #384557; font-size: 17px; margin: 0; }
 
 .exhibit-list { border-top: 2px solid var(--navy); margin-top: 34px; }
+.snapshot-heading { border-top: 2px solid var(--navy); margin-top: 34px; padding-top: 26px; }
+.snapshot-heading h3 { color: var(--navy); font: 600 24px var(--font-display), Georgia, serif; margin: 0 0 8px; }
+.snapshot-heading p { color: #465365; font-size: 16px; margin: 0; }
+.email-snapshot-grid { display: grid; gap: 24px; grid-template-columns: repeat(2, minmax(0, 1fr)); margin-top: 30px; }
+.email-snapshot { border: 1px solid var(--border-dark); background: var(--paper); }
+.email-snapshot > a { background: #e9edf1; border-bottom: 1px solid var(--border); display: block; height: 230px; overflow: hidden; }
+.email-snapshot img { height: 230px; object-fit: cover; object-position: top; width: 100%; }
+.email-snapshot > div { padding: 24px; }
+.email-snapshot .snapshot-date { color: var(--blue); font-size: 12px; font-weight: 800; letter-spacing: .04em; margin: 0 0 7px; text-transform: uppercase; }
+.email-snapshot h3 { color: var(--navy); font: 600 20px/1.35 var(--font-display), Georgia, serif; margin: 0; }
+.email-snapshot .snapshot-sender { color: #5d6877; font-size: 13px; font-weight: 700; margin: 7px 0 14px; }
+.email-snapshot > div > p:not(.snapshot-date):not(.snapshot-sender) { color: #384557; font-size: 15px; margin: 0 0 16px; }
+.email-snapshot > div > a { color: var(--blue); font-size: 14px; font-weight: 800; text-underline-offset: 4px; }
 .exhibit { border-bottom: 1px solid var(--border); display: grid; gap: 26px; grid-template-columns: 94px 1fr; padding: 34px 0; }
 .exhibit-number { color: var(--blue); font-size: 13px; font-weight: 800; letter-spacing: .05em; text-transform: uppercase; }
 .exhibit-title { align-items: center; display: flex; flex-wrap: wrap; gap: 12px; }
@@ -102,6 +115,7 @@ footer span { font-size: 13px; }
   .case-section { gap: 32px; grid-template-columns: 170px 1fr; padding-left: 24px; padding-right: 24px; }
   .timeline-section { padding-left: 24px; padding-right: 24px; }
   .timeline-entry { grid-template-columns: 36px 120px 1fr; }
+  .email-snapshot-grid { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 680px) {
@@ -123,6 +137,7 @@ footer span { font-size: 13px; }
   .timeline-copy { grid-column: 2; }
   .exhibit { gap: 10px; grid-template-columns: 1fr; }
   .document-preview, .document-preview img { height: 290px; }
+  .email-snapshot > a, .email-snapshot img { height: 210px; }
   footer { align-items: flex-start; flex-direction: column; gap: 16px; }
 }
 
