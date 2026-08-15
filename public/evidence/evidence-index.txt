@@ -1,0 +1,36 @@
+AMAZON DISPUTE — EVIDENCE INDEX
+Prepared August 15, 2026
+
+E-01  Amazon order-details screenshot supplied by the customer
+      File: amazon-order-details.png
+      Shows Order 112-9902087-6927424, July 10, 2026; PlayBetter Garmin
+      Venu 4; AMEX ending 8003; $578.79; delivered July 11; and the full
+      disputed Lynnwood delivery address.
+
+E-02  American Express closure screenshot
+      File: amex-closure-screenshot.png
+      Screenshot attached by the customer to the July 14 Amazon escalation.
+
+E-03  American Express merchant document
+      File: amex-merchant-document-578-79.pdf
+      One-page merchant record attached to the closed-dispute email. It shows
+      an Internet card-entry method and a $578.79 Amazon Marketplace charge.
+
+E-04  Material email correspondence record
+      File: email-correspondence-record.txt
+      Chronological, non-duplicative transcript of the material Amazon,
+      American Express, escalation, and attorney-handoff messages.
+
+E-05  Dashboard itself
+      A structured case overview with timeline, disputed facts, unresolved
+      questions, and direct links to E-01 through E-04.
+
+IMPORTANT SOURCE NOTE
+Amazon's July 11 Account Protection emails expressly state that it detected
+unauthorized activity and removed suspicious pending orders from the customer's
+"Your Orders" page. The correspondence reviewed contains no request for or
+record of the customer's consent to that removal. The customer reports that the
+disputed delivered Garmin order and related unauthorized orders later became
+invisible through the normal order-history page. E-01 and the order/shipment
+emails preserve the disputed Garmin order details.
+
