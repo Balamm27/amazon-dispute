@@ -15,16 +15,18 @@ async function render() {
   );
 }
 
-test("renders the two-part first-person attorney case file", async () => {
+test("renders the professional attorney case brief", async () => {
   const response = await render();
   assert.equal(response.status, 200);
   const html = await response.text();
-  assert.match(html, /Amazon let someone take/);
+  assert.match(html, /Executive Summary/);
+  assert.match(html, /Chronology/);
+  assert.match(html, /Issues for Counsel/);
   assert.match(html, /\$578\.79/);
-  assert.match(html, /Case #408324/);
-  assert.match(html, /removed them from/);
-  assert.match(html, /Prepared by Bala Manoghar for Ms\. Lindsey Parlin/);
-  assert.equal((html.match(/<section/g) ?? []).length, 2);
+  assert.match(html, /Case 408324/);
+  assert.match(html, /removed from the/);
+  assert.match(html, /Prepared for Lindsey Parlin/);
+  assert.equal((html.match(/<section/g) ?? []).length, 4);
   assert.doesNotMatch(html, /codex-preview|react-loading-skeleton/i);
 });
 

@@ -1,234 +1,225 @@
-type StoryItem = {
+type TimelineEntry = {
   date: string;
-  title: string;
-  body: string[];
-  proof: string;
-  emphasis?: string;
+  heading: string;
+  detail: string;
+  source: string;
 };
 
-const story: StoryItem[] = [
+const timeline: TimelineEntry[] = [
   {
     date: "July 10, 2026",
-    title: "Someone got into my Amazon account and used my money.",
-    body: [
-      "Despite the fact that I had two-step verification enabled, an unauthorized person accessed my Amazon account and placed four orders using the payment methods and rewards saved in my account. I caught the fraud and contacted Amazon immediately. Three orders were canceled, but Amazon allowed one expensive order to continue through shipment.",
-      "The order was for a PlayBetter Garmin Venu 4 smartwatch bundle. The item cost $559.99, Amazon added $58.80 in tax, and $40.00 of my rewards points were used. The final charge was $578.79 on my American Express card ending in 8003. The package was sent to an address in Lynnwood, Washington that I did not authorize.",
-    ],
-    proof: "Amazon order confirmation, shipment emails, and order-details screenshot",
-    emphasis: "$578.79 taken through my compromised Amazon account",
+    heading: "Unauthorized activity discovered and reported",
+    detail: "I discovered four orders that I did not authorize, despite having two-step verification enabled on my Amazon account. I contacted Amazon immediately. Three orders were canceled; the Garmin order continued into shipment.",
+    source: "Customer escalation emails; Amazon order correspondence",
+  },
+  {
+    date: "July 10, 2026",
+    heading: "Garmin order charged and shipped",
+    detail: "Order 112-9902087-6927424 was placed for a PlayBetter Garmin Venu 4 bundle. The item was $559.99, tax was $58.80, and $40.00 in rewards points was applied. The remaining $578.79 was charged to American Express ending in 8003 and shipped to an address in Lynnwood, Washington that I did not authorize.",
+    source: "Order confirmation, shipment emails, and preserved order screenshot",
   },
   {
     date: "July 10–11, 2026",
-    title: "I repeatedly asked Amazon to stop the fraud. Its customer service failed me.",
-    body: [
-      "I made multiple attempts to get Amazon customer service to take control of the situation before the loss became permanent. Instead of protecting my account and stopping the shipment, I was disconnected, told to contact the delivery carrier myself, and promised a callback that never came.",
-      "Amazon had the account information, the order information, the delivery information, and notice from me—the account holder—that the transaction was fraudulent. Yet its representatives pushed the work back onto me and sent me toward FedEx and American Express to recover money that Amazon had allowed an unauthorized person to take.",
-    ],
-    proof: "My executive escalation emails describing the calls and missed callback",
-  },
-  {
-    date: "July 10–11, 2026",
-    title: "I escalated to Amazon leadership. Nobody took ownership.",
-    body: [
-      "When ordinary customer service would not help, I emailed Amazon leadership and followed up again. I explained that my account had been compromised, that an unauthorized order was moving through Amazon's system, and that I needed urgent intervention. My messages did not produce an immediate response or a responsible case owner.",
-      "This was not a hidden problem that Amazon discovered too late. I was actively warning the company while the events were unfolding. Even after repeated escalation, Amazon did not give me the basic help I expected from a company holding my saved payment information.",
-    ],
-    proof: "Leadership escalation correspondence dated July 10 and July 11",
+    heading: "Repeated customer-service and leadership escalation",
+    detail: "I made multiple efforts to have Amazon stop the transaction and secure the account. I reported a disconnected call, a promised callback that did not occur, and instructions to contact the delivery carrier myself. I also emailed Amazon leadership and followed up when no accountable case owner intervened.",
+    source: "Executive escalation correspondence",
   },
   {
     date: "July 11, 2026",
-    title: "Amazon admitted that an unauthorized person may have accessed my account.",
-    body: [
-      "Amazon's own Account Protection team later wrote that an unauthorized party may have accessed my account. Amazon said it removed suspicious devices, disabled my password, reversed changes, and required me to secure the account again. Its notice also acknowledged that my Two-Step Verification settings may have been affected.",
-      "That admission matters. Amazon's own security process treated this as unauthorized access, not buyer's remorse or a normal order dispute. Nevertheless, acknowledging the compromise did not lead Amazon to return my money.",
-    ],
-    proof: "Two Amazon Account Protection notices dated July 11",
-    emphasis: "Amazon itself treated the account activity as unauthorized",
+    heading: "Amazon acknowledged possible unauthorized access",
+    detail: "Amazon Account Protection stated that an unauthorized party may have accessed the account. Amazon reported removing suspicious devices, disabling the password, reversing account changes, and requiring the account to be secured again. Its notice also stated that Two-Step Verification settings may have been affected.",
+    source: "Amazon Account Protection notices",
   },
   {
     date: "July 11, 2026",
-    title: "Amazon let the package reach the unauthorized destination.",
-    body: [
-      "The Garmin package was recorded as delivered on July 11 to the unauthorized Lynnwood destination. I did not receive it. By this point, Amazon had been told about the fraud and had begun account-protection actions, but its system still completed the delivery that caused the $578.79 loss.",
-    ],
-    proof: "Amazon order-details screenshot showing “Delivered July 11”",
+    heading: "Package delivered to the unauthorized destination",
+    detail: "Amazon's preserved order record shows the Garmin package as delivered on July 11. I did not authorize the destination and did not receive the merchandise.",
+    source: "Amazon order-details screenshot",
   },
   {
     date: "July 11 onward",
-    title: "Amazon removed the orders from my Orders page without asking me.",
-    body: [
-      "Amazon's written notices say it canceled suspicious pending orders and removed them from the “Your Orders” section of my account. I never asked Amazon to remove those records, and nothing in the correspondence shows that Amazon sought or received my permission.",
-      "I also found that the delivered Garmin order and related unauthorized orders were no longer visible through my ordinary order history. By making the orders invisible to me, Amazon made it harder for me to see, document, and pursue the transactions at the center of this dispute. Fortunately, I preserved emails and a screenshot of the Garmin order before the evidence disappeared from normal view.",
-    ],
-    proof: "Amazon Account Protection notices; preserved order screenshot; my account experience",
-    emphasis: "Amazon made critical order evidence invisible inside my own account",
+    heading: "Order records removed from the account view",
+    detail: "Amazon's notices state that suspicious pending orders were canceled and removed from the “Your Orders” section. I did not request or consent to removal. I later found the delivered Garmin order and related unauthorized orders unavailable in my ordinary order history, which made the transactions more difficult to review and document. Emails and a screenshot preserve the available record.",
+    source: "Account Protection notices; preserved screenshot; customer account experience",
   },
   {
     date: "July 12–13, 2026",
-    title: "Amazon called the order fraudulent—then refused to refund me.",
-    body: [
-      "Amazon first told me that my financial institution was responsible for refunding unauthorized charges. On July 13, Christian from Amazon Executive Customer Relations confirmed that the order could be flagged as fraudulent and that this part of Amazon's process was complete.",
-      "That response was outrageous to me. Amazon accepted the fraud flag, but still would not restore the $578.79. Instead, Amazon told me to go to my bank. The company that controlled the account, accepted the order, processed it, and allowed the delivery washed its hands of the financial result and made me chase my own money.",
-    ],
-    proof: "Amazon Account Protection email and Executive Customer Relations email",
-    emphasis: "Amazon confirmed the fraud flag but left me with the loss",
+    heading: "Amazon directed the refund request to the card issuer",
+    detail: "Amazon advised that the financial institution was responsible for refunding unauthorized charges. On July 13, Amazon Executive Customer Relations confirmed that the Garmin order could be flagged as fraudulent and that this step was complete, but Amazon did not issue a refund and again directed me to the bank.",
+    source: "Account Protection email; Executive Customer Relations email",
   },
   {
     date: "July 14, 2026",
-    title: "American Express closed the dispute, leaving the charge with me.",
-    body: [
-      "I followed Amazon's direction and disputed the $578.79 with American Express. American Express then closed dispute D-99641426 and left or placed the amount back on my account. The merchant document attached to the closure identifies Amazon Marketplace, an Internet transaction, and the $578.79 amount, but it does not provide a meaningful explanation for why I should be responsible for an order Amazon had already flagged as fraudulent.",
-      "Amazon had sent me to American Express. American Express sent me back with the charge unresolved. I was trapped between two large companies, while neither accepted responsibility and I remained the person who lost the money.",
-    ],
-    proof: "American Express closure screenshot and merchant document",
+    heading: "American Express closed the dispute",
+    detail: "American Express closed dispute D-99641426, leaving the $578.79 transaction unresolved. The attached merchant document identifies Amazon Marketplace, an Internet transaction, and the amount, but provides no detailed rationale reconciling the result with Amazon's fraud flag.",
+    source: "American Express closure notice and merchant document",
   },
   {
     date: "July 14–August 15, 2026",
-    title: "I confronted Amazon with the contradiction. Amazon stopped responding.",
-    body: [
-      "After American Express closed the dispute, I wrote back to Amazon and its leadership. I asked whether Amazon had contested my dispute, whether Amazon had told American Express that its own fraud team flagged the order, whether Amazon would correct any conflicting information, and how it planned to return my money. I also asked Amazon to preserve the relevant account, device, authentication, order, support, delivery, and chargeback records.",
-      "I have found no substantive Amazon response answering those questions. Amazon did not explain how two-step verification failed, what it told American Express, why it refused a refund after flagging the order as fraudulent, or why the relevant orders became invisible in my account. I kept emailing leadership, and nobody bothered to resolve the problem.",
-    ],
-    proof: "My July 14 follow-up and mailbox record reviewed through August 15",
-    emphasis: "Amazon has never given me a substantive resolution",
+    heading: "Amazon did not substantively answer the follow-up",
+    detail: "I asked Amazon whether it had contested the card dispute, whether it informed American Express that the order was flagged as fraudulent, whether it would correct conflicting information, and how the amount would be refunded. I also requested preservation of relevant account, authentication, order, support, delivery, and chargeback records. No substantive response addressing those questions was located in the reviewed mailbox through August 15.",
+    source: "July 14 follow-up; mailbox review through August 15, 2026",
   },
   {
     date: "August 12–14, 2026",
-    title: "I turned to counsel because Amazon would not take responsibility.",
-    body: [
-      "LegalEASE matched my matter, Case #408324, with Ms. Lindsey Parlin. Ms. Parlin asked me for the records showing the charges and the companies' responses. I prepared this page so she can see the complete sequence and open the underlying evidence directly.",
-      "I am seeking legal help because Amazon let an unauthorized person use my account and money, failed to stop the transaction despite my urgent contacts, made me pursue FedEx and American Express on my own, removed order records from my normal account view, and then ignored my efforts to get a real answer. After everything I did to give Amazon a chance to fix this, I want the company held responsible.",
-    ],
-    proof: "LegalEASE referral and Ms. Parlin's document request",
+    heading: "Matter referred to counsel",
+    detail: "LegalEASE matched Case 408324 with Lindsey Parlin. Ms. Parlin requested documentation of the charges and the responses received from Amazon and American Express.",
+    source: "LegalEASE referral and Parlin Law correspondence",
   },
 ];
 
-const evidence = [
+const exhibits = [
   {
-    id: "01",
+    number: "A",
     title: "Amazon order-details screenshot",
-    description: "This is the clearest single record of the unauthorized purchase. It shows order 112-9902087-6927424, the $578.79 total, American Express ending in 8003, the unauthorized Lynnwood shipping destination, and delivery on July 11.",
+    description: "Preserved record of order 112-9902087-6927424, the $578.79 total, payment method, unauthorized destination, and July 11 delivery status.",
     href: "/evidence/amazon-order-details.png",
-    label: "Open full-size image",
+    action: "View image",
     image: "/evidence/amazon-order-details.png",
-    sensitive: true,
+    sensitivity: "Contains personal information",
   },
   {
-    id: "02",
-    title: "Complete material email correspondence",
-    description: "This chronological record contains the non-duplicative Amazon order and security notices, my customer-service and leadership escalations, Amazon Executive Customer Relations' response, the American Express closure, and the attorney handoff.",
+    number: "B",
+    title: "Material email correspondence",
+    description: "Chronological, non-duplicative record of the order notices, Amazon security communications, customer-service and leadership escalations, American Express closure, and attorney referral.",
     href: "/evidence/email-correspondence-record.txt",
-    label: "Read complete email record",
+    action: "Read correspondence",
   },
   {
-    id: "03",
-    title: "American Express dispute-closure screenshot",
-    description: "This preserves the notice I received after following Amazon's instruction to pursue the card issuer. It shows that my dispute was closed while the unauthorized Amazon charge remained unresolved.",
+    number: "C",
+    title: "American Express closure screenshot",
+    description: "Screenshot preserved with the July 14 escalation after American Express closed the card dispute.",
     href: "/evidence/amex-closure-screenshot.png",
-    label: "Open full-size image",
+    action: "View image",
     image: "/evidence/amex-closure-screenshot.png",
   },
   {
-    id: "04",
+    number: "D",
     title: "American Express merchant document",
-    description: "This original PDF attachment identifies Amazon Marketplace, the Internet entry method, and the disputed amount of $578.79. It contains no detailed explanation reconciling the outcome with Amazon's fraud determination.",
+    description: "Original one-page PDF identifying Amazon Marketplace, Internet card entry, and the disputed amount of $578.79.",
     href: "/evidence/amex-merchant-document-578-79.pdf",
-    label: "Open original PDF",
+    action: "View PDF",
   },
   {
-    id: "05",
+    number: "E",
     title: "Evidence index and source notes",
-    description: "This inventory explains where each exhibit came from, why it matters, and which Amazon notices document the removal of suspicious orders from the “Your Orders” section.",
+    description: "Inventory describing the source and relevance of each preserved item, including the Amazon notices concerning removal from “Your Orders.”",
     href: "/evidence/evidence-index.txt",
-    label: "Open evidence index",
+    action: "View index",
   },
 ];
 
 export default function Home() {
   return (
     <main id="top">
-      <header className="topbar">
-        <a className="brand" href="#top">Bala Manoghar · Amazon dispute</a>
-        <nav aria-label="Page sections">
-          <a href="#story">My story</a>
+      <header className="site-header">
+        <a className="case-name" href="#top">Case 408324</a>
+        <nav aria-label="Case brief navigation">
+          <a href="#summary">Executive summary</a>
+          <a href="#timeline">Timeline</a>
+          <a href="#issues">Issues</a>
           <a href="#evidence">Evidence</a>
         </nav>
-        <span className="private-note">Private · Prepared for Ms. Parlin</span>
+        <span>Confidential attorney review</span>
       </header>
 
-      <section className="story-section" id="story">
-        <div className="story-hero">
-          <p className="overline">1 · My story</p>
-          <h1>Amazon let someone take <span>$578.79</span> from me. Then it left me to recover the money myself.</h1>
-          <p className="direct-address">Ms. Parlin—this is what happened, in order, and why I am asking for your help.</p>
-          <div className="case-facts" aria-label="Case facts">
-            <div><strong>$578.79</strong><span>Money still at issue</span></div>
-            <div><strong>112-9902087-6927424</strong><span>Unauthorized Amazon order</span></div>
-            <div><strong>D-99641426</strong><span>Closed Amex dispute</span></div>
-            <div><strong>408324</strong><span>LegalEASE case</span></div>
+      <div className="document-heading">
+        <p>Prepared for Lindsey Parlin · August 15, 2026</p>
+        <h1>Amazon Account Compromise and Unauthorized Transaction</h1>
+        <p className="subtitle">Factual case brief and supporting record</p>
+      </div>
+
+      <section className="case-section executive-summary" id="summary">
+        <div className="section-label"><span>01</span><h2>Executive Summary</h2></div>
+        <div className="section-content">
+          <p className="lead">This matter concerns unauthorized access to my Amazon account, an unauthorized order totaling $578.79, Amazon's acknowledgment of account compromise and fraud, and the absence of a refund after both Amazon and American Express declined to resolve the loss.</p>
+          <p>On July 10, 2026, I discovered four unauthorized orders in my Amazon account despite having two-step verification enabled. I notified Amazon immediately. Three orders were canceled, but order 112-9902087-6927424—a Garmin smartwatch bundle—was shipped to an address I did not authorize and recorded as delivered the following day.</p>
+          <p>Amazon's Account Protection team subsequently stated that an unauthorized party may have accessed my account. Amazon removed suspicious devices and account changes, and Executive Customer Relations confirmed that the Garmin order was flagged as fraudulent. Nevertheless, Amazon refused to issue the $578.79 refund and directed me to American Express. American Express then closed dispute D-99641426, leaving the charge unresolved.</p>
+          <p>Amazon also stated that suspicious orders were removed from the “Your Orders” section. I did not request or consent to that removal. The Garmin order and related unauthorized activity later became unavailable through my ordinary order history, limiting my access to evidence concerning the incident. I preserved the available order emails, security notices, screenshot, and American Express documents presented below.</p>
+
+          <div className="fact-table" role="table" aria-label="Key case facts">
+            <div role="row"><span role="rowheader">Amount at issue</span><strong role="cell">$578.79</strong></div>
+            <div role="row"><span role="rowheader">Amazon order</span><strong role="cell">112-9902087-6927424</strong></div>
+            <div role="row"><span role="rowheader">Amex dispute</span><strong role="cell">D-99641426</strong></div>
+            <div role="row"><span role="rowheader">Incident date</span><strong role="cell">July 10, 2026</strong></div>
+            <div role="row"><span role="rowheader">Current status</span><strong role="cell">Unresolved; refund not issued</strong></div>
+          </div>
+
+          <div className="position-note">
+            <h3>Position</h3>
+            <p>Amazon controlled the account, order, shipment, security response, and merchant-side chargeback information. It received prompt notice of the unauthorized activity and later flagged the order as fraudulent, yet it shifted recovery to the carrier and card issuer and did not provide a substantive resolution. I am seeking counsel's advice regarding recovery of the loss, Amazon's handling of the compromised account, removal of order records, and preservation of relevant evidence.</p>
           </div>
         </div>
-
-        <div className="opening-statement">
-          <p>Amazon failed me at every stage.</p>
-          <p>It allowed an unauthorized person into my account despite two-step verification, allowed that person to use my saved payment method and rewards, failed to stop the shipment after I urgently reported the fraud, and then pushed me toward FedEx and American Express to recover my own money. Amazon later confirmed the fraudulent-order flag—but did not refund me. It removed order records from my account view without asking me, and when American Express closed the dispute, Amazon ignored my direct questions and repeated leadership emails.</p>
-        </div>
-
-        <div className="timeline" aria-label="Chronological story">
-          {story.map((item, index) => (
-            <article className="story-step" key={`${item.date}-${item.title}`}>
-              <div className="step-marker"><span>{String(index + 1).padStart(2, "0")}</span></div>
-              <div className="step-date">{item.date}</div>
-              <div className="step-content">
-                <h2>{item.title}</h2>
-                {item.body.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
-                {item.emphasis && <strong className="emphasis">{item.emphasis}</strong>}
-                <p className="proof"><b>Documented by:</b> {item.proof}</p>
-              </div>
-            </article>
-          ))}
-        </div>
-
-        <div className="attorney-ask">
-          <p className="overline">Why I am asking for legal help</p>
-          <h2>I gave Amazon every opportunity to fix what it allowed to happen. It chose not to.</h2>
-          <p>I want advice on holding Amazon responsible for the unauthorized loss, its failure to protect and assist me, the disappearance of the relevant orders from my account view, and its refusal to give a substantive answer after acknowledging the fraud. I also want the relevant Amazon records preserved before any more evidence becomes unavailable.</p>
-        </div>
       </section>
 
-      <section className="evidence-section" id="evidence">
-        <div className="evidence-heading">
-          <p className="overline">2 · Evidence</p>
-          <h2>The documents behind my account</h2>
-          <p>Each item opens directly. Together, these records show the unauthorized order, Amazon's account-protection findings, my repeated attempts to get help, Amazon's refusal to refund me, American Express's closure, and the unresolved questions Amazon has ignored.</p>
-        </div>
-
-        <div className="evidence-list">
-          {evidence.map((item) => (
-            <article className="evidence-item" key={item.id}>
-              <div className="evidence-number">E-{item.id}</div>
-              <div className="evidence-copy">
-                <div className="evidence-title-line">
-                  <h3>{item.title}</h3>
-                  {item.sensitive && <span>Sensitive personal information</span>}
+      <section className="case-section timeline-section" id="timeline">
+        <div className="section-label"><span>02</span><h2>Chronology</h2></div>
+        <div className="section-content">
+          <p className="section-intro">The following chronology is based on the preserved emails, screenshots, and account records currently available.</p>
+          <div className="timeline-list">
+            {timeline.map((entry, index) => (
+              <article className="timeline-entry" key={`${entry.date}-${entry.heading}`}>
+                <div className="timeline-index">{String(index + 1).padStart(2, "0")}</div>
+                <div className="timeline-date">{entry.date}</div>
+                <div className="timeline-copy">
+                  <h3>{entry.heading}</h3>
+                  <p>{entry.detail}</p>
+                  <p className="source"><b>Source:</b> {entry.source}</p>
                 </div>
-                <p>{item.description}</p>
-                <a href={item.href} target="_blank" rel="noreferrer">{item.label} <span aria-hidden="true">↗</span></a>
-                {item.image && (
-                  <a className="evidence-preview" href={item.href} target="_blank" rel="noreferrer" aria-label={`Open ${item.title}`}>
-                    <img src={item.image} alt={item.title} />
-                  </a>
-                )}
-              </div>
-            </article>
-          ))}
+              </article>
+            ))}
+          </div>
         </div>
-
-        <footer>
-          <strong>Prepared by Bala Manoghar for Ms. Lindsey Parlin</strong>
-          <span>Case #408324 · Record reviewed through August 15, 2026</span>
-        </footer>
       </section>
+
+      <section className="case-section issues-section" id="issues">
+        <div className="section-label"><span>03</span><h2>Issues for Counsel</h2></div>
+        <div className="section-content">
+          <ol className="issue-list">
+            <li><span>01</span><div><h3>Responsibility for the unauthorized loss</h3><p>Amazon acknowledged possible unauthorized access and completed its fraudulent-order flag, but no refund followed. The interaction between Amazon's findings and American Express's dispute closure remains unexplained.</p></div></li>
+            <li><span>02</span><div><h3>Response after prompt notice</h3><p>Amazon received notice while the activity was unfolding. The record should be evaluated to determine whether Amazon took reasonable and timely action to prevent shipment and delivery.</p></div></li>
+            <li><span>03</span><div><h3>Account security and two-step verification</h3><p>Amazon has not explained how the account was accessed, whether two-step verification was bypassed or altered, the scope of the compromise, or whether the account is conclusively secure.</p></div></li>
+            <li><span>04</span><div><h3>Removal and preservation of order records</h3><p>Amazon removed suspicious orders from the normal account view without recorded consent. Preservation may be necessary for authentication, device, order, support, delivery, internal fraud, and chargeback records.</p></div></li>
+            <li><span>05</span><div><h3>Information supplied during the Amex dispute</h3><p>Amazon has not answered whether it contested the dispute or communicated its own fraud determination to American Express. The merchant-side submission and any associated records should be obtained and reviewed.</p></div></li>
+          </ol>
+        </div>
+      </section>
+
+      <section className="case-section evidence-section" id="evidence">
+        <div className="section-label"><span>04</span><h2>Evidence</h2></div>
+        <div className="section-content">
+          <p className="section-intro">The files below are the currently preserved supporting record. Each exhibit opens directly in a separate tab.</p>
+          <div className="exhibit-list">
+            {exhibits.map((exhibit) => (
+              <article className="exhibit" key={exhibit.number}>
+                <div className="exhibit-number">Exhibit {exhibit.number}</div>
+                <div className="exhibit-copy">
+                  <div className="exhibit-title">
+                    <h3>{exhibit.title}</h3>
+                    {exhibit.sensitivity && <span>{exhibit.sensitivity}</span>}
+                  </div>
+                  <p>{exhibit.description}</p>
+                  <a href={exhibit.href} target="_blank" rel="noreferrer">{exhibit.action} <span aria-hidden="true">↗</span></a>
+                  {exhibit.image && (
+                    <a className="document-preview" href={exhibit.href} target="_blank" rel="noreferrer" aria-label={`Open ${exhibit.title}`}>
+                      <img src={exhibit.image} alt={exhibit.title} />
+                    </a>
+                  )}
+                </div>
+              </article>
+            ))}
+          </div>
+          <div className="record-note">
+            <h3>Record limitation</h3>
+            <p>This brief distinguishes Amazon's written statement that suspicious pending orders were removed from “Your Orders” from my separate observation that the delivered Garmin order and related unauthorized transactions later became unavailable in ordinary order history. No conclusion is offered here regarding Amazon's internal reason for that disappearance; preservation and discovery may clarify it.</p>
+          </div>
+        </div>
+      </section>
+
+      <footer>
+        <div><strong>Bala Manoghar</strong><span>Prepared for Lindsey Parlin</span></div>
+        <div><strong>Case 408324</strong><span>Record reviewed through August 15, 2026</span></div>
+      </footer>
     </main>
   );
 }

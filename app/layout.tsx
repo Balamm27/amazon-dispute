@@ -20,19 +20,19 @@ export async function generateMetadata(): Promise<Metadata> {
   const origin = `${protocol}://${host}`;
 
   return {
-    title: "My Amazon Account-Takeover Dispute | Bala Manoghar",
+    title: "Amazon Account Compromise | Case 408324",
     description:
-      "My detailed timeline and evidence showing how Amazon allowed an unauthorized $578.79 order, refused to refund me, and stopped responding.",
+      "Attorney case brief concerning an Amazon account compromise, unauthorized $578.79 transaction, and unresolved refund dispute.",
     openGraph: {
-      title: "My Amazon Account-Takeover Dispute",
-      description: "My detailed timeline and evidence file, prepared for Ms. Lindsey Parlin.",
+      title: "Amazon Account Compromise | Case 408324",
+      description: "Executive summary, chronology, issues for counsel, and supporting evidence.",
       type: "website",
       images: [{ url: `${origin}/og.png`, width: 1200, height: 630, alt: "Amazon account-takeover dispute case file" }],
     },
     twitter: {
       card: "summary_large_image",
-      title: "My Amazon Account-Takeover Dispute",
-      description: "My detailed timeline and evidence file, prepared for Ms. Lindsey Parlin.",
+      title: "Amazon Account Compromise | Case 408324",
+      description: "Executive summary, chronology, issues for counsel, and supporting evidence.",
       images: [`${origin}/og.png`],
     },
   };
