@@ -15,14 +15,16 @@ async function render() {
   );
 }
 
-test("renders the legal evidence dashboard", async () => {
+test("renders the two-part first-person attorney case file", async () => {
   const response = await render();
   assert.equal(response.status, 200);
   const html = await response.text();
-  assert.match(html, /Amazon account-takeover/);
+  assert.match(html, /Amazon let someone take/);
   assert.match(html, /\$578\.79/);
   assert.match(html, /Case #408324/);
   assert.match(html, /removed them from/);
+  assert.match(html, /Prepared by Bala Manoghar for Ms\. Lindsey Parlin/);
+  assert.equal((html.match(/<section/g) ?? []).length, 2);
   assert.doesNotMatch(html, /codex-preview|react-loading-skeleton/i);
 });
 
