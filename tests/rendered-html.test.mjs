@@ -24,6 +24,8 @@ test("renders the professional attorney case brief", async () => {
   assert.match(html, /Issues for Counsel/);
   assert.match(html, /Unknown scope of exposed addresses and payment information/);
   assert.match(html, /Amazon email snapshots/);
+  assert.match(html, /Amazon did not proactively discover the fraud/);
+  assert.match(html, /both of my replies/);
   assert.match(html, /\$578\.79/);
   assert.match(html, /Case 408324/);
   assert.match(html, /removed from the/);

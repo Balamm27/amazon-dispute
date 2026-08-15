@@ -21,11 +21,13 @@ E-04  Material email correspondence record
       Chronological, non-duplicative transcript of the material Amazon,
       American Express, escalation, and attorney-handoff messages.
 
-E-05  Amazon email snapshots
+E-05  Amazon email panoramic evidence renderings
       Folder: email-snapshots/
-      Four Gmail-source images preserving the visible sender, subject, and
-      presentation of Amazon's July 11–13 security and executive-response
-      emails. The full message text remains in E-04.
+      Four complete images generated from Gmail-source headers and verbatim
+      message bodies. The executive-relations image presents Amazon's response
+      and both customer follow-ups as one chronological thread. Original Gmail
+      messages should be preserved for native metadata and authentication. The
+      full searchable correspondence also remains in E-04.
 
 E-06  Case brief itself
       A structured executive summary, chronology, issues for counsel, and
