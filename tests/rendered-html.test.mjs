@@ -25,7 +25,8 @@ test("renders the professional attorney case brief", async () => {
   assert.match(html, /Unknown scope of exposed addresses and payment information/);
   assert.match(html, /Amazon email snapshots/);
   assert.match(html, /Amazon did not proactively discover the fraud/);
-  assert.match(html, /Amazon has not answered the core security questions/);
+  assert.match(html, /Unresolved account takeover, deficient post-notice response, and resulting damages/);
+  assert.match(html, /Evidence preservation/);
   assert.match(html, /one direct financial consequence of a larger unresolved security incident/);
   assert.match(html, /both of my replies/);
   assert.doesNotMatch(html, /—/);

@@ -173,14 +173,16 @@ export default function Home() {
         <aside className="case-status" aria-label="Current case status">
           <div className="status-heading">
             <ShieldAlert aria-hidden="true" />
-            <div><p>Primary concern</p><strong>Amazon has not answered the core security questions.</strong></div>
+            <div><p>Primary legal concern</p><strong>Unresolved account takeover, deficient post-notice response, and resulting damages</strong></div>
           </div>
-          <p className="status-summary">The scope of the account and data exposure remains unknown. Amazon has not confirmed what addresses, payment information, devices, sessions, or account data were accessed.</p>
+          <p className="status-summary">The record raises issues concerning reasonable account security, incident investigation and notice, mitigation, remediation, preservation of evidence, and consumer harm. The scope of any exposure remains undisclosed.</p>
           <dl>
-            <div><dt>Amazon response</dt><dd>No substantive answer</dd></div>
-            <div><dt>Exposure scope</dt><dd>Unknown</dd></div>
-            <div><dt>Account security</dt><dd>Not confirmed</dd></div>
-            <div><dt>Financial loss</dt><dd>$578.79 not refunded</dd></div>
+            <div><dt>Unauthorized access</dt><dd>Fraudulent order flagged</dd></div>
+            <div><dt>Potential data exposure</dt><dd>Scope undisclosed</dd></div>
+            <div><dt>Post-notice response</dt><dd>No substantive resolution</dd></div>
+            <div><dt>Remediation</dt><dd>Incomplete and unverified</dd></div>
+            <div><dt>Evidence preservation</dt><dd>Order records removed from view</dd></div>
+            <div><dt>Actual financial harm</dt><dd>$578.79 unreimbursed</dd></div>
           </dl>
         </aside>
       </div>
