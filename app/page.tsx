@@ -124,28 +124,28 @@ const emailSnapshots = [
     date: "July 11, 2026 · 9:21 AM PT",
     sender: "Amazon Account Protection Services",
     subject: "Account Recovery: Sign-in and verify your order.",
-    significance: "Complete evidence rendering. Amazon states that an unauthorized party may have accessed the account, that suspicious devices and account changes were removed, that Two-Step Verification may have been affected, and that unauthorized card charges must be reported to the bank.",
+    significance: "Amazon states that an unauthorized party may have accessed my account, that suspicious devices and account changes were removed, that Two-Step Verification may have been affected, and that unauthorized card charges must be reported to the bank.",
     href: "/evidence/email-snapshots/amazon-account-recovery-jul-11.png",
   },
   {
     date: "July 11, 2026 · 1:29 PM PT",
     sender: "Amazon Account Protection Services",
     subject: "Your Amazon account needs attention",
-    significance: "Complete evidence rendering. Amazon confirms action taken after the customer contacted it, directs the customer to verify security settings, and again places refund decisions with the bank.",
+    significance: "Amazon confirms that it acted after I contacted the company, directs me to verify my security settings, and again places responsibility for refund decisions with the bank.",
     href: "/evidence/email-snapshots/amazon-account-needs-attention-jul-11.png",
   },
   {
     date: "July 11, 2026 · 10:49 PM PT",
     sender: "Amazon Account Protection Services",
     subject: "Recent changes to your Amazon.com account",
-    significance: "Complete evidence rendering. Amazon instructs the customer to review all recent credit- and debit-card activity, report unauthorized charges within 90 days, complete bank dispute forms, and rely on the financial institution for reimbursement.",
+    significance: "Amazon instructs me to review all recent credit- and debit-card activity, report unauthorized charges within 90 days, complete bank dispute forms, and rely on the financial institution for reimbursement.",
     href: "/evidence/email-snapshots/amazon-recent-changes-jul-12.png",
   },
   {
     date: "July 13, 2026 · 6:46 AM PT",
     sender: "Amazon Executive Customer Relations",
     subject: "A Message from Christian with Amazon.com's Executive Customer Relations",
-    significance: "Panoramic rendering of the complete three-message thread: Christian's Amazon response and both of my follow-ups. It documents the fraud flag, Amazon's bank referral, the unanswered security questions, my monitoring burden, the Amex denial, and my preservation requests.",
+    significance: "This three-message thread contains Christian's response for Amazon and both of my follow-up messages. It documents Amazon's fraud flag, its referral to the bank, my unanswered security questions, the monitoring burden placed on me, the Amex denial, and my requests to preserve evidence.",
     href: "/evidence/email-snapshots/amazon-executive-relations-jul-13.png",
   },
 ];
@@ -253,23 +253,23 @@ export default function Home() {
       <section className="case-section evidence-section" id="evidence">
         <div className="section-label"><div className="section-icon"><FolderOpen aria-hidden="true" /></div><span>04</span><h2>Evidence</h2></div>
         <div className="section-content">
-          <p className="section-intro">The files below are the currently preserved supporting record. Each exhibit opens directly in a separate tab.</p>
+          <p className="section-intro">The exhibits below comprise the supporting record presently available to me. Each exhibit may be opened in a separate tab for review.</p>
           <div className="snapshot-heading">
-            <h3><Mail aria-hidden="true" /> Amazon email snapshots</h3>
-            <p>The earlier viewport captures have been replaced. These are complete, panoramic evidence renderings built from the source Gmail headers and verbatim message bodies. The executive-relations image contains Amazon's message and both of my replies in one chronological thread. The original Gmail messages and the complete searchable correspondence remain preserved separately.</p>
+            <h3><Mail aria-hidden="true" /> Amazon email correspondence</h3>
+            <p>These exhibits reproduce the material correspondence in chronological order, including sender, recipient, date, subject, and message content. The July 13 exhibit contains Amazon's response and both of my follow-up messages in the same thread. I have also retained the original Gmail messages and a searchable correspondence record.</p>
           </div>
           <div className="email-snapshot-grid">
             {emailSnapshots.map((email) => (
               <article className="email-snapshot" key={email.subject}>
-                <a href={email.href} target="_blank" rel="noreferrer" aria-label={`Open snapshot of ${email.subject}`}>
-                  <img src={email.href} alt={`Gmail snapshot: ${email.subject}`} />
+                <a href={email.href} target="_blank" rel="noreferrer" aria-label={`Open email exhibit: ${email.subject}`}>
+                  <img src={email.href} alt={`Email exhibit: ${email.subject}`} />
                 </a>
                 <div>
                   <p className="snapshot-date">{email.date}</p>
                   <h3>{email.subject}</h3>
                   <p className="snapshot-sender">From: {email.sender}</p>
                   <p>{email.significance}</p>
-                  <a href={email.href} target="_blank" rel="noreferrer">Open full-size snapshot <span aria-hidden="true">↗</span></a>
+                  <a href={email.href} target="_blank" rel="noreferrer">View full email exhibit <span aria-hidden="true">↗</span></a>
                 </div>
               </article>
             ))}
