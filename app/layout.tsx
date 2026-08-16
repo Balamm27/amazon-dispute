@@ -20,19 +20,19 @@ export async function generateMetadata(): Promise<Metadata> {
   const origin = `${protocol}://${host}`;
 
   return {
-    title: "Amazon Account Compromise | Case 408324",
+    title: "Unresolved Amazon Account Security Incident | Case 408324",
     description:
-      "Attorney case brief concerning an Amazon account compromise, unauthorized $578.79 transaction, and unresolved refund dispute.",
+      "Attorney case brief concerning Amazon's unanswered account-security incident, unknown data exposure, and unresolved $578.79 loss.",
     openGraph: {
-      title: "Amazon Account Compromise | Case 408324",
-      description: "Executive summary, chronology, issues for counsel, and supporting evidence.",
+      title: "Unresolved Amazon Account Security Incident | Case 408324",
+      description: "Amazon's unanswered account-security incident, unknown data exposure, financial loss, and supporting evidence.",
       type: "website",
       images: [{ url: `${origin}/og.png`, width: 1200, height: 630, alt: "Amazon account-takeover dispute case file" }],
     },
     twitter: {
       card: "summary_large_image",
-      title: "Amazon Account Compromise | Case 408324",
-      description: "Executive summary, chronology, issues for counsel, and supporting evidence.",
+      title: "Unresolved Amazon Account Security Incident | Case 408324",
+      description: "Amazon's unanswered account-security incident, unknown data exposure, financial loss, and supporting evidence.",
       images: [`${origin}/og.png`],
     },
   };

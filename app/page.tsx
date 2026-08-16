@@ -167,16 +167,20 @@ export default function Home() {
       <div className="document-heading">
         <div className="heading-copy">
           <p>Prepared for Lindsey Parlin · August 15, 2026</p>
-          <h1>Amazon Account Compromise and Unauthorized Transaction</h1>
-          <p className="subtitle">Factual case brief and supporting record</p>
+          <h1>Unresolved Amazon Account Security Incident</h1>
+          <p className="subtitle">Account takeover, unknown data exposure, ignored escalation, and unreimbursed financial loss</p>
         </div>
         <aside className="case-status" aria-label="Current case status">
-          <p>Current status</p>
-          <strong>Unresolved</strong>
+          <div className="status-heading">
+            <ShieldAlert aria-hidden="true" />
+            <div><p>Primary concern</p><strong>Amazon has not answered the core security questions.</strong></div>
+          </div>
+          <p className="status-summary">The scope of the account and data exposure remains unknown. Amazon has not confirmed what addresses, payment information, devices, sessions, or account data were accessed.</p>
           <dl>
-            <div><dt>Loss</dt><dd>$578.79</dd></div>
-            <div><dt>Fraud flag</dt><dd>Confirmed</dd></div>
-            <div><dt>Refund</dt><dd>Not issued</dd></div>
+            <div><dt>Amazon response</dt><dd>No substantive answer</dd></div>
+            <div><dt>Exposure scope</dt><dd>Unknown</dd></div>
+            <div><dt>Account security</dt><dd>Not confirmed</dd></div>
+            <div><dt>Financial loss</dt><dd>$578.79 not refunded</dd></div>
           </dl>
         </aside>
       </div>
@@ -184,7 +188,11 @@ export default function Home() {
       <section className="case-section executive-summary" id="summary">
         <div className="section-label"><div className="section-icon"><FileText aria-hidden="true" /></div><span>01</span><h2>Executive Summary</h2></div>
         <div className="section-content">
-          <p className="lead">This matter concerns unauthorized access to my Amazon account, an unauthorized order totaling $578.79, Amazon's acknowledgment of account compromise and fraud, and the absence of a refund after both Amazon and American Express declined to resolve the loss.</p>
+          <p className="lead">This matter is principally about Amazon's failure to investigate, explain, and meaningfully respond after a serious account takeover. The unauthorized $578.79 charge is one direct financial consequence of a larger unresolved security incident.</p>
+          <div className="primary-finding">
+            <ShieldAlert aria-hidden="true" />
+            <div><h3>The central issue</h3><p>An unauthorized person entered my account, added or used an unknown address, placed multiple orders, and used a payment method stored with Amazon. Amazon has not told me what personal and payment information was accessible, has not confirmed that every unauthorized change was removed, and has not provided a substantive answer despite repeated emails to customer service and senior leadership.</p></div>
+          </div>
           <p>On July 10, 2026, I discovered four unauthorized orders in my Amazon account despite having two-step verification enabled. Amazon did not proactively discover the fraud and alert me. Its account-protection response followed my repeated calls and requests for escalation after I informed Amazon of the unauthorized activity. Three orders were canceled, but order 112-9902087-6927424, a Garmin smartwatch bundle, was shipped to an address I did not authorize and recorded as delivered the following day.</p>
           <p>During those initial contacts, Amazon customer service did not appear to have a coherent process for handling the incident. I reported disconnected calls, promised callbacks that did not occur, and representatives directing me to contact FedEx and my bank myself. I was the victim reporting fraud through Amazon's platform, yet Amazon placed the investigation, shipment intervention, financial recovery, and continuing monitoring work back on me.</p>
           <p>Amazon's Account Protection team subsequently stated that an unauthorized party may have accessed my account. Amazon removed suspicious devices and account changes, and Executive Customer Relations confirmed that the Garmin order was flagged as fraudulent. Nevertheless, Amazon refused to issue the $578.79 refund and directed me to American Express. American Express then closed dispute D-99641426, leaving the charge unresolved.</p>
