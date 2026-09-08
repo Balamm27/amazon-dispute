@@ -1,5 +1,5 @@
 import assert from "node:assert/strict";
-import { access } from "node:fs/promises";
+import { access, readFile } from "node:fs/promises";
 import test from "node:test";
 
 const root = new URL("../", import.meta.url);
@@ -34,7 +34,8 @@ test("renders the professional attorney case brief", async () => {
   assert.match(html, /\$578\.79/);
   assert.match(html, /Case 408324/);
   assert.match(html, /removed from the/);
-  assert.match(html, /Prepared for Lindsey Parlin/);
+  assert.match(html, /Prepared for independent legal review/);
+  assert.doesNotMatch(html, /Lindsey|Parlin/i);
   assert.equal((html.match(/<section/g) ?? []).length, 4);
   assert.doesNotMatch(html, /codex-preview|react-loading-skeleton/i);
 });
@@ -50,5 +51,7 @@ test("ships the core evidence files", async () => {
     access(new URL("../public/evidence/email-snapshots/amazon-recent-changes-jul-12.png", import.meta.url)),
     access(new URL("../public/evidence/email-snapshots/amazon-executive-relations-jul-13.png", import.meta.url)),
   ]);
+  const correspondence = await readFile(new URL("../public/evidence/email-correspondence-record.txt", import.meta.url), "utf8");
+  assert.doesNotMatch(correspondence, /Lindsey|Parlin/i);
   await assert.rejects(access(new URL("../app/_sites-preview/", import.meta.url)));
 });

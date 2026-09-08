@@ -70,12 +70,6 @@ const timeline: TimelineEntry[] = [
     detail: "I asked Amazon whether it had contested the card dispute, whether it informed American Express that the order was flagged as fraudulent, whether it would correct conflicting information, and how the amount would be refunded. I also requested preservation of relevant account, authentication, order, support, delivery, and chargeback records. No substantive response addressing those questions was located in the reviewed mailbox through August 15.",
     source: "July 14 follow-up; mailbox review through August 15, 2026",
   },
-  {
-    date: "August 12-14, 2026",
-    heading: "Matter referred to counsel",
-    detail: "LegalEASE matched Case 408324 with Lindsey Parlin. Ms. Parlin requested documentation of the charges and the responses received from Amazon and American Express.",
-    source: "LegalEASE referral and Parlin Law correspondence",
-  },
 ];
 
 const exhibits = [
@@ -166,7 +160,7 @@ export default function Home() {
 
       <div className="document-heading">
         <div className="heading-copy">
-          <p>Prepared for Lindsey Parlin · August 15, 2026</p>
+          <p>Prepared for independent legal review · September 9, 2026</p>
           <h1>Unresolved Amazon Account Security Incident</h1>
           <p className="subtitle">Account takeover, unknown data exposure, ignored escalation, and unreimbursed financial loss</p>
         </div>
@@ -302,7 +296,7 @@ export default function Home() {
       </section>
 
       <footer>
-        <div><strong>Bala Manoghar</strong><span>Prepared for Lindsey Parlin</span></div>
+        <div><strong>Bala Manoghar</strong><span>Prepared for independent legal review</span></div>
         <div><strong>Case 408324</strong><span>Record reviewed through August 15, 2026</span></div>
       </footer>
     </main>
